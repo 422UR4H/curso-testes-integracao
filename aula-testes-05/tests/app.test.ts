@@ -19,6 +19,7 @@ describe("API test", () => {
     for (let i = 0; i < arr.length - 1; i++) {
       expect((await api.get(`/fibonacci?elements=${arr[i]}`)).status).toBe(400);
     }
+    expect((await api.get(`/fibonacci?elements=10`)).status).toBe(200);
   });
 });
 
