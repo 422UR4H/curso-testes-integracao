@@ -13,7 +13,7 @@ describe("API test", () => {
 
 describe("/fibonacci", () => {
   it("should return an array and status 200 when parameter is a valid number", async () => {
-    const { status, body } = await api.get(`/fibonacci?elements=10`)
+    const { status, body } = await api.get(`/fibonacci?elements=10`);
     expect(status).toBe(200);
     expect(body).toHaveLength(10);
     expect(body).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
